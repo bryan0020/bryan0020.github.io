@@ -31,7 +31,7 @@ function geoFindMe() {
 }
 
 document.querySelector('#find-me').addEventListener('click', geoFindMe);
-
+/*
 function findMyPlace() {
   if (window.navigator.geolocation) {
       window.navigator.geolocation.getCurrentPosition( (position) => {
@@ -44,6 +44,7 @@ function findMyPlace() {
   }
 }
 findMyPlace();
+*/
 
 // if user already set never, won't prompt
 // safari n chrome both works 4 iOS
