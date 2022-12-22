@@ -1,14 +1,19 @@
-var x = document.getElementById("location");
-var coor;
 
-x.innerHTML = "";
+document.addEventListener("DOMContentLoaded", function() {
+    
+    var x = document.getElementById("location");
+    var coor;
 
-window.setInterval(
+    x.innerHTML = "";
+
+    window.setInterval(
     function () {
         getLocation();
     }, 
     1000
 );
+
+})
 
 function getLocation() {
     if (navigator.geolocation) {
