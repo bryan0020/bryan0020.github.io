@@ -1,11 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    geoFindMe();
-    
-})
-
-function geoFindMe() {
-
     const status = document.querySelector('#status');
     const mapLink = document.querySelector('#map-link');
   
@@ -33,5 +27,13 @@ function geoFindMe() {
       status.textContent = 'Locating…';
       navigator.geolocation.getCurrentPosition(success, error);
     }
+    
+})
+
+/*
+function geoFindMe() {
+
+    
   
 }
+*/
