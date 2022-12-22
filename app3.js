@@ -26,7 +26,7 @@ function geoFindMe() {
     }
   
     function error() {
-        status.textContent = 'Unable to retrieve your location';
+        status.textContent = 'Failed to retrieve your location';
     }
   
     // getCurrentPosition(success, error, options) - options, long maximumAge, long timeout, boolean enableHighAccuracy
@@ -38,8 +38,4 @@ function geoFindMe() {
         navigator.geolocation.getCurrentPosition(success, error);
     }
 
-    const watchID = navigator.geolocation.watchPosition((position) => {
-        doSomething(position.coords.latitude, position.coords.longitude);
-    });
-  
 }
