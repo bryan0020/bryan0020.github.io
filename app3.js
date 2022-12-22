@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     geoFindMe();
     
-},
+})
 
 function geoFindMe() {
 
@@ -34,4 +34,4 @@ function geoFindMe() {
       navigator.geolocation.getCurrentPosition(success, error);
     }
   
-})
+}
