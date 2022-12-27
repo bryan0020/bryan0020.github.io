@@ -61,8 +61,8 @@ function trackMe() {
     const mapLink = document.querySelector('#map-link');
     const details = document.querySelector('#details');
 
-    mapLink.href = '';
-    mapLink.textContent = '';
+    // mapLink.href = '';
+    // mapLink.textContent = '';
 
     function success(position) {
         const latitude = position.coords.latitude;
