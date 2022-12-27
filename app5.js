@@ -16,7 +16,6 @@ function stopTimer() {
 }
 
 function trackMe() {
-    console.log("test");
 
     const status = document.querySelector('#status');
     const mapLink = document.querySelector('#map-link');
@@ -27,7 +26,7 @@ function trackMe() {
         const longitude = position.coords.longitude;
         let time = timeConverter(position.timestamp);
     
-        status.innerHTML = 'Location found successfully!!!';
+        status.innerHTML = 'Location found successfully!!! </ br> Will update every 5 seconds';
     
         mapLink.href = `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=19/${latitude}/${longitude}`;
         mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
