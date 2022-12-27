@@ -28,19 +28,6 @@ function onError(error) {
 var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
 
 function timeConverter1(UNIX_timestamp) {
-    /*
-    var a = new Date(UNIX_timestamp * 1000);
-    console.log("a: " + a);
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    var year = a.getFullYear();
-    var month = months[a.getMonth()];
-    var date = a.getDate();
-    var hour = a.getHours();
-    var min = a.getMinutes();
-    var sec = a.getSeconds();
-    var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
-    return time;
-    */
     var d = new Date(UNIX_timestamp);
     console.log("d: " + d);
     return(d.toLocaleString());
