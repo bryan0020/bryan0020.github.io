@@ -1,4 +1,4 @@
-const watchId = '';
+let watchId = '';
 
 setInterval(function () {
     watchId = navigator.geolocation.watchPosition(
@@ -6,7 +6,7 @@ setInterval(function () {
     );
 }, 5000)
 
-function buttonClickHandler(watchId) {
+function buttonClickHandler() {
     // Cancel the updates when the user clicks a button.
     navigator.geolocation.clearWatch(watchId);
 }
