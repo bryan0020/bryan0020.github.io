@@ -4,6 +4,7 @@ let btn = document.querySelector('#find-me');
 let tracking = false;
 
 function startTimer() {
+    trackMe();
     timer = setInterval(function() {
         trackMe();
     }, 5000);
