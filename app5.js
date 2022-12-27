@@ -14,12 +14,10 @@ function trackMe() {
         const longitude = position.coords.longitude;
         let time = timeConverter(position.timestamp);
 
-        status.textContent = 'Successfully locate location';
+        status.textContent = '<p>Successfully locate location</p><br>';
 
         mapLink.href = `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=19/${latitude}/${longitude}`;
-        mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} ° + <br /> +
-        'Time: ' + time + <br /> + 
-        <hr /> + mapLink.textContent`;
+        mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
         
         details.innerHTML =   'Latitude: '  + latitude + '<br />' +
                                 'Longitude: ' + longitude + '<br />' +
