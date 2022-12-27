@@ -4,10 +4,8 @@ function trackMe() {
     const mapLink = document.querySelector('#map-link');
     const details = document.querySelector('#details');
 
-    // status.textContent = '';
     mapLink.href = '';
     mapLink.textContent = '';
-    // details.textContent = '';
 
     function success(position) {
         const latitude = position.coords.latitude;
@@ -44,7 +42,7 @@ function trackMe() {
     }
 
     // Options: throw an error if no update is received every 30 seconds.
-    var watchID = navigator.geolocation.watchPosition(success, error, { timeout: 30000 });
+    // var watchID = navigator.geolocation.watchPosition(success, error, { timeout: 30000 });
 
 }
 
