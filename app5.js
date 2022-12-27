@@ -4,10 +4,10 @@ function trackMe() {
     const mapLink = document.querySelector('#map-link');
     const details = document.querySelector('#details');
 
-    status.textContent = '';
+    // status.textContent = '';
     mapLink.href = '';
     mapLink.textContent = '';
-    details.textContent = '';
+    // details.textContent = '';
 
     function success(position) {
         const latitude = position.coords.latitude;
