@@ -1,4 +1,4 @@
-
+/*
 document.addEventListener("DOMContentLoaded", function() {
     
     var x = document.getElementById("location");
@@ -28,3 +28,4 @@ function showPosition(position) {
         "<br>Longitude: " + position.coords.longitude;
     x.innerHTML = coor;
 }
+*/
