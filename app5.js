@@ -21,10 +21,15 @@ function trackMe() {
         'Time: ' + time + <br /> + 
         <hr /> + mapLink.textContent`;
         
-        details.textContent =   'Latitude: '  + latitude + '<br />' +
-                                'Longitude: ' + longitude + '<br />' +
-                                'Time: ' + time + '<br />' +
-                                '<hr />' + details.textContent;
+//         details.textContent =   'Latitude: '  + latitude + '<br />' +
+//                                 'Longitude: ' + longitude + '<br />' +
+//                                 'Time: ' + time + '<br />' +
+//                                 '<hr />' + details.textContent;
+        
+        details.textContent =   `<p>Latitude: ${latitude} </p> <br />
+                                <p>Longitude: ${longitude} </p> <br />
+                                <p>Time: ${time} </p> <br />
+                                <hr /> ${details.textContent}`;
     }
 
     function error() {
