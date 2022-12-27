@@ -11,7 +11,7 @@ function startTimer() {
  
 function stopTimer() {
     clearInterval(timer);
-    navigator.geolocation.clearWatch(id);
+    // navigator.geolocation.clearWatch(id);
 }
 
 function trackMe() {
