@@ -30,6 +30,5 @@ function geoFindMe() {
 
 document.querySelector('#find-me').addEventListener('click', geoFindMe);
 
-map = new OpenLayers.Map("demoMap");
-map.addLayer(new OpenLayers.Layer.OSM());
-map.zoomToMaxExtent();
+// coordinates, zoom level
+var map = L.map('map').setView([51.505, -0.09], 13);
