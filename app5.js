@@ -24,15 +24,17 @@ function trackMe() {
     function success(position) {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
+        let accuracy = position.coords.accuracy;
         let time = timeConverter(position.timestamp);
-    
+
         status.innerHTML = 'Location found successfully!!! </ br> Will update every 5 seconds';
     
         mapLink.href = `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=19/${latitude}/${longitude}`;
         mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
     
-        details.innerHTML =   'Latitude: '  + latitude + '<br />' +
+        details.innerHTML =     'Latitude: '  + latitude + '<br />' +
                                 'Longitude: ' + longitude + '<br />' +
+                                'Accuracy: ' + accuracy + '<br />' +
                                 'Time: ' + time + '<br />' +
                                 '<hr />' + details.innerHTML;
     }
