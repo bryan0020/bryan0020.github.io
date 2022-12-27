@@ -1,4 +1,7 @@
 let timer;
+let id;
+let btn = document.querySelector('#find-me');
+let tracking = false;
 
 function startTimer() {
     timer = setInterval(function() {
@@ -8,6 +11,7 @@ function startTimer() {
  
 function stopTimer() {
     clearInterval(timer);
+    navigator.geolocation.clearWatch(id);
 }
 
 function trackMe() {
@@ -55,4 +59,14 @@ function trackMe() {
     }
 }
 
-document.querySelector('#find-me').addEventListener('click', startTimer);
+btn.addEventListener("click", function () {
+    if (tracking) {
+        btn.innerHTML = "Start tracking";
+        tracking = false;
+        stopTimer();
+    } else {
+        btn.innerHTML = "Stop tracking";
+        tracking = true;
+        startTimer();
+    }
+});
