@@ -3,6 +3,7 @@ function trackMe() {
     const status = document.querySelector('#status');
     const mapLink = document.querySelector('#map-link');
 
+    status.textContent = '';
     mapLink.href = '';
     mapLink.textContent = '';
 
@@ -11,12 +12,12 @@ function trackMe() {
         const longitude = position.coords.longitude;
         let time = timeConverter(position.timestamp);
 
-        status.textContent = '';
-        mapLink.textContent = '';
+        status.textContent = 'Successfully locate location';
+
         mapLink.href = `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=19/${latitude}/${longitude}`;
-        mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °` + '<br />' +
-        'Time: ' + time + 
-        '<hr />' + mapLink.textContent;
+        mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} ° + '<br />' +
+        'Time: ' + time + '<br />' + 
+        '<hr />' + mapLink.textContent`;
 
     }
 
