@@ -6,12 +6,13 @@ function trackMe() {
     
     const status = document.querySelector('#status');
     const mapLink = document.querySelector('#map-link');
+    var element = document.getElementById('geolocation');
 
     mapLink.href = '';
     mapLink.textContent = '';
     
     function onSuccess(position) {
-        var element = document.getElementById('geolocation');
+        element.textContent = '';
         element.innerHTML = 'Latitude: '  + position.coords.latitude + '<br />' +
                             'Longitude: ' + position.coords.longitude + '<br />' +
                             'Altitude: ' + position.coords.altitude + '<br />' +
