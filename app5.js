@@ -32,8 +32,9 @@ function trackMe() {
         status.textContent = 'Geolocation is not supported by your browser';
     } else {
         status.textContent = 'Locating...';
-        navigator.geolocation.watchPosition(success, error, { timeout: 30000 });
+        // navigator.geolocation.watchPosition(success, error, { timeout: 30000 });
         // navigator.geolocation.getCurrentPosition(success, error);
+        navigator.geolocation.watchPosition(success, error);
     }
     function timeConverter(UNIX_timestamp) {
         var d = new Date(UNIX_timestamp);
@@ -46,4 +47,4 @@ function trackMe() {
 
 }
 
-document.querySelector('#find-me').addEventListener('click', trackMe);
+document.querySelector('#find-me').addEventListener('click', setInterval(trackMe(), 10000));
