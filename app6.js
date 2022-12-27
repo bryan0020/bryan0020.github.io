@@ -1,6 +1,6 @@
 var button = document.querySelector("#find-me");
 var count = document.querySelector("#count");
-const locationID = '';
+var locationID = '';
 
 var running = false;
 
