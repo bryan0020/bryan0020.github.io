@@ -7,7 +7,7 @@ function geoFindMe() {
   mapLink.textContent = '';
 
   function success(position) {
-    const latitude = position.coords.latitude;
+    const latitude  = position.coords.latitude;
     const longitude = position.coords.longitude;
 
     status.textContent = '';
@@ -19,8 +19,6 @@ function geoFindMe() {
     status.textContent = 'Unable to retrieve your location';
   }
 
-  // getCurrentPosition(success, error, options) - options, long maximumAge, long timeout, boolean enableHighAccuracy
-  // maximumAge - device cache position, timeout, if enableHighAccuracy true - get best position, default false
   if (!navigator.geolocation) {
     status.textContent = 'Geolocation is not supported by your browser';
   } else {
@@ -31,20 +29,6 @@ function geoFindMe() {
 }
 
 document.querySelector('#find-me').addEventListener('click', geoFindMe);
-/*
-function findMyPlace() {
-  if (window.navigator.geolocation) {
-      window.navigator.geolocation.getCurrentPosition( (position) => {
-          console.log(position.coords);
-      }, (e) => {
-          console.log(e);
-      });
-  } else {
-      console.log("navigator not supported");
-  }
-}
-findMyPlace();
-*/
 
 // if user already set never, won't prompt
 // safari n chrome both works 4 iOS
