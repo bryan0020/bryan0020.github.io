@@ -39,8 +39,16 @@ function trackMe() {
                                 '<hr />' + details.innerHTML;
     }
 
-    function error() {
-        status.textContent = 'Unable to retrieve your location';
+//     function error() {
+//         status.textContent = 'Unable to retrieve your location';
+//     }
+    
+    function error(err) {
+        if (err.code == 1) {
+            status.textContent = "Error: Access is denied!";
+        } else if (err.code == 2) {
+            status.textContent = "Error: Position is unavailable!";
+        }
     }
 
     function timeConverter(UNIX_timestamp) {
