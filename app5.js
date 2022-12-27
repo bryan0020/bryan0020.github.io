@@ -61,7 +61,7 @@ function trackMe() {
     } else {
         status.innerHTML = 'Locating...';
         navigator.geolocation.getCurrentPosition(success, error, {
-            // enableHighAccuracy: true,
+            enableHighAccuracy: true,
             maximumAge: 0,
             timeout: 30000 // large timeout to accomodate slow GPS lock on some devices
         });
