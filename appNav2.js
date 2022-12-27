@@ -42,5 +42,6 @@ function timeConverter1(UNIX_timestamp) {
     return time;
     */
     var d = new Date(UNIX_timestamp);
+    console.log("d: " + d);
     return(d.toLocaleString());
 }
