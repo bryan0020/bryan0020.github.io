@@ -29,3 +29,7 @@ function geoFindMe() {
 }
 
 document.querySelector('#find-me').addEventListener('click', geoFindMe);
+
+map = new OpenLayers.Map("demoMap");
+map.addLayer(new OpenLayers.Layer.OSM());
+map.zoomToMaxExtent();
