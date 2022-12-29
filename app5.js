@@ -86,7 +86,7 @@ shellBtn.addEventListener("click", function () {
     var now = new Date().valueOf();
     setTimeout(function () {
         if (new Date().valueOf() - now > 100) return;
-        window.location.href = "https://www.google.com/maps/dir/?api=1&destination=Shell+near+me&travelmode=driving"
+        window.location.href = "https://www.google.com/maps/dir/?api=1&destination=Shell+Near+Me&travelmode=driving"
     }, 25);
     window.location.href = "https://waze.com/ul?q=Shell";
 
