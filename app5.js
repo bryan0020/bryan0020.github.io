@@ -86,8 +86,9 @@ shellBtn.addEventListener("click", function () {
     var now = new Date().valueOf();
     setTimeout(function () {
         if (new Date().valueOf() - now > 100) return;
-        window.location.href = "https://www.google.com/maps/dir/?api=1&destination=Shell%20near%20me&travelmode=driving"
+        window.location.href ="http://maps.apple.com/?q=Shell+near+me";
+        // window.location.href = "https://www.google.com/maps/dir/?api=1&destination=Shell%20near%20me&travelmode=driving"
     }, 25);
-    window.location.href = "https://waze.com/ul?q=Shell";
+    window.location.href = "https://waze.com/ul?q=Shell+near+me";
 
 })
